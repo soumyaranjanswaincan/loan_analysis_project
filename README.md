@@ -44,7 +44,7 @@ In this project, we developed and evaluated three different machine learning mod
 - F1-Score: The harmonic mean of precision and recall, providing a single metric to balance both.
 
 ## Results
-. Logistic Regression
+1. Logistic Regression
 Accuracy: 80.35%
 Precision (Class 0): 0.55
 Recall (Class 0): 0.07

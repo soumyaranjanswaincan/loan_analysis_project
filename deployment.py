@@ -12,12 +12,15 @@ model = joblib.load('model.joblib')
 
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app)  # This enables CORS for all routes
 
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()  # Get data from POST request
     prediction = model.predict([data['features']])  # Predict using the model
-    return jsonify({'prediction': int(prediction[0])})  # Return the prediction
+
+    result = 'Fully Paid' if prediction == 1 else 'Charged Off'
+    return jsonify({'prediction': result}) # Return the prediction
 
 if __name__ == '__main__':
     app.run(debug=True)

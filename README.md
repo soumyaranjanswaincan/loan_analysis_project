@@ -26,6 +26,16 @@ In this project, we developed and evaluated three different machine learning mod
 - Purpose: A more complex model that attempts to capture non-linear relationships between features and the target variable.
 - Architecture: A simple feedforward neural network with one hidden layer.
 
+4. Decision Tree
+- Decision Trees work well with large datasets and are relatively fast to train
+- Decision Trees are easy to interpret and understand
+- Can handle non-linear relationships between features and the target variable
+
+5. XGBoost
+- High performance and efficiency in handling large datasets.
+- Produces accurate predictions
+- Incorporates regularization techniques to prevent overfitting.
+
 ## Model Evaluation Metrics
 
 - Accuracy: The overall correctness of the model's predictions.
@@ -61,12 +71,30 @@ Precision (Class 1): 0.81
 Recall (Class 1): 0.98
 F1-Score (Class 1): 0.89
 
+4. Decision Tree
+Accuracy: 71.01%
+Precision (Class 0): 0.27
+Recall (Class 0): 0.28
+F1-Score (Class 0): 0.28
+Precision (Class 1): 0.82
+Recall (Class 1): 0.82
+F1-Score (Class 1): 0.82
+
+5. XGBoost
+Accuracy: 80.388%
+Precision (Class 0): 0.53
+Recall (Class 0): 0.10
+F1-Score (Class 0): 0.17
+Precision (Class 1): 0.81
+Recall (Class 1): 0.98
+F1-Score (Class 1): 0.89
+
 ## Analysis
-Overall Performance: All three models achieved similar accuracy, around 80%, indicating that they effectively predict the majority class ('Fully Paid').
+Overall Performance: Decision Tree has the worest accuracy, around 70% and all other models achieved similar accuracy, around 80%, indicating that they effectively predict the majority class ('Fully Paid'). 
 Class Imbalance Challenge: All models struggled with identifying 'Charged Off' loans, resulting in low recall and F1-scores for Class 0.
 Neural Network Performance: The Neural Network slightly outperformed the other models in detecting 'Charged Off' loans, showing a small improvement in recall for Class 0. However, this improvement was marginal and did not significantly enhance overall model performance.
 Conclusion & Recommendations
-Class Imbalance Handling: All models demonstrate difficulty in handling class imbalance, particularly in predicting the minority class ('Charged Off'). Further techniques, such as SMOTE (Synthetic Minority Over-sampling Technique) or using more complex ensemble methods, could be explored to improve performance.
+Class Imbalance Handling: All models demonstrate difficulty in handling class imbalance, particularly in predicting the minority class ('Charged Off'). We used "class-weight" - balanced and did not find a better result in almost all the models. Logistic Regiression Modul shows even worse result when the class-weight is set to be balanced. Further techniques, such as SMOTE (Synthetic Minority Over-sampling Technique) or using more complex ensemble methods, could be explored to improve performance.
 Model Selection: While the Neural Network offered a slight edge, the choice of model should consider the trade-offs between interpretability (Logistic Regression) and performance (Neural Networks). Random Forest provides a good balance with moderate interpretability and competitive performance.
 Next Steps: To improve the model's ability to predict 'Charged Off' loans, it would be valuable to explore more sophisticated models or techniques, including ensemble methods, advanced neural network architectures, and feature engineering.
 

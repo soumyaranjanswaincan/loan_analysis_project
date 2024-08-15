@@ -14,7 +14,7 @@ model = joblib.load('model.joblib')
 app = Flask(__name__)
 CORS(app)  # This enables CORS for all routes
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict_loan_status', methods=['POST'])
 def predict():
     data = request.get_json()  # Get data from POST request
     prediction = model.predict([data['features']])  # Predict using the model

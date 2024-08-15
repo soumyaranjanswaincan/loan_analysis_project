@@ -1,6 +1,9 @@
 ## Introduction
 In this project, we developed and evaluated three different machine learning models—Logistic Regression, Random Forest, Decision Tree, XGBoost and Neural Networks—to predict the status of loans (either 'Fully Paid' or 'Charged Off'). The goal is to identify which model performs best in classifying loans and to understand the strengths and weaknesses of each approach.
 
+# Data Source
+From Kaggle: https://www.kaggle.com/datasets/ranitsarkar01/loantap-logisticregression
+
 ## Data overview 
 
 - Dataset: The dataset consists of various financial and demographic features of loan applicants.

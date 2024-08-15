@@ -4,7 +4,7 @@ In this project, we developed and evaluated three different machine learning mod
 ## Data overview 
 
 - Dataset: The dataset consists of various financial and demographic features of loan applicants.
-- arget Variable: loan_status, which has two classes:
+- Target Variable: loan_status, which has two classes:
 1 for 'Fully Paid'
 0 for 'Charged Off'
 - Features: We preprocessed the data by:

@@ -46,6 +46,12 @@ From Kaggle: https://www.kaggle.com/datasets/ranitsarkar01/loantap-logisticregre
 - Recall: The ability of the model to capture all true positive cases.
 - F1-Score: The harmonic mean of precision and recall, providing a single metric to balance both.
 
+## Deployment and validation
+
+The model was hosted as an API using Flask app.
+We created a HTML form with javascript for posting the input data
+
+
 ## Results
 1. Logistic Regression
 Accuracy: 80.35%
